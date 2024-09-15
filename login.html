@@ -6,56 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediSync</title>
     <link rel="icon" href="MediSync_processed.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
 </head>
-<link rel="stylesheet" href="css/login.css">
 
 <body>
-    <div class="watermark">
-        <img src="MediSync Logo.png" alt="Watermark Logo">
-    </div>
     <header>
         <div class="logo">
-            <img src="MediSync Logo.png" alt="" width="70px" height="70px">
+            <img src="MediSync Logo.png" alt="MediSync Logo" width="70px" height="70px">
             <h2>MediSync</h2>
         </div>
-
         <ul class="navbar">
             <li><a href="landingpage.html#home">Home</a></li>
             <li><a href="landingpage.html#faqs">FAQ</a></li>
             <li><a href="landingpage.html#feedback">Feedback</a></li>
             <li><a href="landingpage.html#contact">Contact</a></li>
         </ul>
-        </div>
     </header>
+
+    <!-- Login Container -->
     <div class="login-container">
-        <h2>LOGIN AS : <select id="loginSelect" onchange="changeLoginForm()">
-                <option value="user">User Login</option>
-                <option value="admin">Hospital Login</option>
-            </select>
-        </h2>
-        <div id="loginForm">
+        <div class="login-box">
+            <img src="MediSync Logo.png" alt="MediSync Logo" class="login-logo">
             <form>
-
                 <div class="input-group">
-                    <label for="mobile-number">Mobile Number</label>
-                    <input id="mobile-number" placeholder="Enter Mobile Number" type="text" />
+                    <input id="mobile-number" placeholder="Mobile Number or Email" type="text" required />
                 </div>
                 <div class="input-group">
-                    <label for="uid">UID</label>
-                    <input id="uid" placeholder="Enter UID" type="text" />
+                    <input id="password" placeholder="Password" type="password" required />
                 </div>
                 <div class="input-group-btn">
-                    <a href="opd1.html">ENTER</a>
-
-                </div>
-                <div class="input-group-btn">
-                    <a href="#">Get OTP</a>
-
+                    <button type="submit" class="login-btn">Log In</button>
                 </div>
             </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="input-group-btn">
+                <a href="#" class="login-link">Forgot password?</a>
+            </div>
+        </div>
+
+        <!-- Sign Up Section -->
+        <div class="signup-container">
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
         </div>
     </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+
     <script src="Scripts/login.js"></script>
     <script src="Scripts/main.js"></script>
-
 </body>
+
+</html>
